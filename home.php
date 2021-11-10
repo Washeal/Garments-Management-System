@@ -65,7 +65,7 @@ require_once("db_config.php");
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	
 	<script src="assets/js/jquery.min.js"></script>
-	<title>Admin</title>
+	<title>Garments Management System</title>
 	<style>
 	     .card-body{
 			 background-color:;

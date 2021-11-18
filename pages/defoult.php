@@ -5,7 +5,10 @@
 							<div class="d-flex align-items-center">
 								<div class="me-auto">
 									<p class="mb-0 text-white">Total Orders</p>
-									<h4 class="my-1 text-white">4805</h4>
+									<h4 class="my-1 text-white"><?php
+									  $members = $db->query("SELECT * FROM orders");
+									  echo $members->num_rows > 0 ? $members->num_rows : "0";
+									?></h4>
 									<p class="mb-0 font-13 text-white">+2.5% from last week</p>
 								</div>
 								<div id="chart1"></div>
@@ -18,8 +21,15 @@
 					   <div class="card-body">
 						   <div class="d-flex align-items-center">
 							   <div class="me-auto">
-								   <p class="mb-0 text-white">Total Revenue</p>
-								   <h4 class="my-1 text-white">$84,245</h4>
+								   <p class="mb-0 text-white">Total Employee</p>
+								   <h4 class="my-1 text-white">
+                                    
+								   <?php
+									  $members = $db->query("SELECT * FROM employees");
+									  echo $members->num_rows > 0 ? $members->num_rows : "0";
+									?>
+
+								   </h4>
 								   <p class="mb-0 font-13 text-white">+5.4% from last week</p>
 							   </div>
 							   <div id="chart2"></div>
@@ -47,7 +57,13 @@
 						   <div class="d-flex align-items-center">
 							   <div class="me-auto">
 								   <p class="mb-0 text-dark">Total Customers</p>
-								   <h4 class="my-1 text-dark">8.4K</h4>
+								   <h4 class="my-1 text-dark">
+
+								   <?php
+									  $members = $db->query("SELECT * FROM registrations");
+									  echo $members->num_rows > 0 ? $members->num_rows : "0";
+									?>
+								   </h4>
 								   <p class="mb-0 font-13 text-dark">+8.4% from last week</p>
 							   </div>
 							   <div id="chart4"></div>
@@ -55,4 +71,38 @@
 					   </div>
 					</div>
 				  </div> 
+				  <div class="col">
+					 <div class="card radius-10 bg-gradient-cosmic">
+						<div class="card-body">
+							<div class="d-flex align-items-center">
+								<div class="me-auto">
+									<p class="mb-0 text-white">Total Orders</p>
+									<h4 class="my-1 text-white"><?php
+									  $members = $db->query("SELECT * FROM saplayer");
+									  echo $members->num_rows > 0 ? $members->num_rows : "0";
+									?></h4>
+									<p class="mb-0 font-13 text-white">+2.5% from last week</p>
+								</div>
+								<div id="chart1"></div>
+							</div>
+						</div>
+					 </div>
+				   </div>
+				   <div class="col">
+					 <div class="card radius-10 bg-gradient-ohhappiness">
+						<div class="card-body">
+							<div class="d-flex align-items-center">
+								<div class="me-auto">
+									<p class="mb-0 text-white">Total Purchases</p>
+									<h4 class="my-1 text-white"><?php
+									  $members = $db->query("SELECT * FROM purchases");
+									  echo $members->num_rows > 0 ? $members->num_rows : "0";
+									?></h4>
+									<p class="mb-0 font-13 text-white">+2.5% from last week</p>
+								</div>
+								<div id="chart1"></div>
+							</div>
+						</div>
+					 </div>
+				   </div>
 				</div>
